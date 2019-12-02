@@ -1,0 +1,77 @@
+{
+  "name": "ok_app",
+  "version": "1.0.0",
+  "description": "ok_app",
+  "private": true,
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geekcojp/ok_app.git"
+  },
+  "author": "GEEK inc.",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server",
+    "lint": "eslint src -c .eslintrc.json --ext ts,tsx; exit 0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.1.0",
+    "@types/react": "^16.9.13",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.5",
+    "antd": "^3.26.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "babel-eslint": "^10.0.3",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "^4.5.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-app": "^6.0.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "file-loader": "^5.0.2",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
+    "prettier": "^1.19.1",
+    "pretty-quick": "^2.0.1",
+    "style-loader": "^1.0.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
