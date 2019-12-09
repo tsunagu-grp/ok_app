@@ -1,0 +1,8 @@
+.ant-comment-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.ant-comment-right .ant-comment-inner {
+  justify-content: flex-end;
+}
