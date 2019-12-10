@@ -1,12 +1,12 @@
 // 型を定義する
 
-type User = {
+export type User = {
   id: number;
   name: string;
   avatar: string;
 };
 
-type Talk = {
+export type Talk = {
   id: number;
   content: string;
   timestamp: Date;
