@@ -8,10 +8,10 @@ const Post: React.FC = () => {
   return (
     <div>
       <Row>
-        <Col span={12}>
+        <Col span={20}>
           <InputText />
         </Col>
-        <Col span={12}>
+        <Col span={4}>
           <SubmitButton />
         </Col>
       </Row>

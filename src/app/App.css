@@ -10,3 +10,9 @@ body {
   height: 100vh;
   width: 100vw;
 }
+
+.App {
+  width: calc(100% - 30px);
+  max-width: 500px;
+  margin: 0 auto;
+}
