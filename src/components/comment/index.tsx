@@ -8,7 +8,7 @@ import './comment.css';
 
 const CommentField: React.FC = () => {
   // const dispatch = useDispatch();
-  const talk = useSelector((state: RootState) => state.talk.data);
+  const talk = useSelector((state: RootState) => state.talk.talk.data);
   // const setTalk = (data: Talk[]) => {
   //   dispatch(updateTalk(data));
   // };
