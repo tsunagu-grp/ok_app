@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction, combineReducers} from '@reduxjs/toolkit';
 import {Talk} from '../model';
 
 interface TalkData {
@@ -77,4 +77,26 @@ const talkModules = createSlice({
 });
 
 export const {updateTalk} = talkModules.actions;
-export default talkModules;
+
+interface Content {
+  content: string;
+}
+
+const contentInitialState: Content = {
+  content: '',
+};
+
+const contentModules = createSlice({
+  name: 'content',
+  initialState: contentInitialState,
+  reducers: {
+    updateContent: (state, action: PayloadAction<Content>) => {
+      state = action.payload;
+    },
+  },
+});
+
+export const talkReducer = combineReducers({
+  talk: talkModules.reducer,
+  content: contentModules.reducer,
+});

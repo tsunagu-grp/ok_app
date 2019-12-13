@@ -5,7 +5,7 @@ const SubmitButton: React.FC = () => {
   return (
     <div>
       <Button type="primary" htmlType="submit">
-        送信
+        送信する
       </Button>
     </div>
   );
