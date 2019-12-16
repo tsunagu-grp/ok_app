@@ -90,11 +90,11 @@ const contentModules = createSlice({
   name: 'content',
   initialState: contentInitialState,
   reducers: {
-    updateContent: (state, action: PayloadAction<Content>) => {
-      state = action.payload;
-    },
+    updateContent: (state, action: PayloadAction<Content>) => action.payload,
   },
 });
+
+export const {updateContent} = contentModules.actions;
 
 export const talkReducer = combineReducers({
   talk: talkModules.reducer,
